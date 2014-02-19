@@ -1,0 +1,29 @@
+<h1>Sign Up For Launch Email</h1>
+
+<p>Sign up here to be notified when we launch Groovy, a location based story telling app.</p>
+
+<%= form_for :email, url:emails_path do |f| %>
+ <% if @email.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@email.errors.count, "error") %> prohibited
+      this post from being saved:</h2>
+    <ul>
+    <% @email.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+  <% end %>
+   <p>
+    <%= f.label :email %><br>
+    <%= f.text_field :email %>
+  </p>
+ 
+  <p>
+    <%= f.submit 'Submit', class: "btn btn-large btn-primary"%>
+  </p>
+  <p>Don't worry, we won't share it with anyone nor spam you. </p>
+
+  <%= link_to 'No thanks', new_question_path%>
+<% end %>
+
