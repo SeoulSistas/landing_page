@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140219031930) do
+ActiveRecord::Schema.define(version: 20140220213315) do
 
   create_table "emails", force: true do |t|
     t.string   "email"
@@ -23,6 +23,9 @@ ActiveRecord::Schema.define(version: 20140219031930) do
     t.text     "question"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.float    "latitude"
+    t.float    "longitude"
+    t.float    "radius"
   end
 
 end
