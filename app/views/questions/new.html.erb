@@ -1,8 +1,9 @@
 <h1>Ask a question</h1>
-<h2>Ask anything that's on your mind either in your current location or to people around the world. </h2>
 <div class="container">
       <div class="row">
         <div class="col-lg-6">
+          <h2>Ask anything that's on your mind either in your current location or to people around the world. </h2>
+
           <div style='width: 500x;'>
             <div id="map-canvas" style='width: 500px; height: 300px;'></div>
           </div>
@@ -38,17 +39,30 @@
             </p>
          <% end %>
         </div>
-        <div class="col-lg-4">
-<!--might move stuff here so everything is above the fold -->
-        </div>
+        <div class="col-lg-6">
+        <h2> Recently asked questions</h2>
+        <table class ="table table-bordered">
+          <thead>
+            <tr>
+              <th>Question</th>
+              <th>From</th>
+            </tr>
+          </thead>
         <% for question in @newest_questions %>
-          <div>
+          <tr>
+            <td>
             <%= question.question %>
-            near <%= question.location %>
+          </td>
+          <td>
+            Somewhere near <%= question.location %>
+          </td>
+        </tr>
           </div>
         <% end %>
       </div>
     </div>
+  </div>
+
 
   </br>
 
