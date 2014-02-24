@@ -11,7 +11,7 @@ end
 	def create
 		@question = Question.new(question_params)
 		if @question.save
-			redirect_to @question
+			redirect_to new_email_path
 		else
 			render 'new'
 		end
