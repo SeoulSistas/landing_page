@@ -31,10 +31,6 @@
               <%= f.text_area :radius %>
               <%= f.text_area :latitude %>
               <%= f.text_area :longitude %>
-
-
-
-
             </p>
            
             <p>
@@ -45,6 +41,12 @@
         <div class="col-lg-4">
 <!--might move stuff here so everything is above the fold -->
         </div>
+        <% for question in @newest_questions %>
+          <div>
+            <%= question.question %>
+            near <%= question.location %>
+          </div>
+        <% end %>
       </div>
     </div>
 
