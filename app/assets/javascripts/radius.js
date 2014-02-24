@@ -163,7 +163,7 @@ function displayInfo(widget) {
   // info.innerHTML = 'Radius: ' +
     // kmToMiles(widget.get('distance')) + ' mi';
   var radius = document.getElementById('question_radius');
-  // radius.innerHTML = kmToMiles(widget.get('distance'));
+  radius.innerHTML = kmToMiles(widget.get('distance'));
 }
 
 function codeAddress() {
@@ -171,7 +171,7 @@ function codeAddress() {
   geocoder.geocode( { 'address': address}, function(results, status) {
     if (status == google.maps.GeocoderStatus.OK) {
       map.setCenter(results[0].geometry.location);
-     // setupDistanceWidget();
+     setupDistanceWidget();
      distanceWidget.set('position', map.getCenter());
     } else {
       alert('Geocode was not successful for the following reason: ' + status);
@@ -196,8 +196,8 @@ function updateCoordsOnPage(pos) {
   var lngVal = Math.round(pos.lng() * 10) / 10;
   var latForm = document.getElementById('question_latitude');
   var lngForm = document.getElementById('question_longitude');
-  // latForm.innerHTML = latVal;
-  // lngForm.innerHTML = lngVal;
+  latForm.innerHTML = latVal;
+  lngForm.innerHTML = lngVal;
 }
 
 var geocoder;

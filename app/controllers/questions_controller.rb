@@ -27,6 +27,6 @@ end
 
 	private
 		def question_params
-			params.require(:question).permit(:question);
+			params.require(:question).permit(:question, :radius, :longitude, :latitude);
 		end
 end
