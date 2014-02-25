@@ -5,7 +5,6 @@
 
 #slider-range-max {
     width: 200px;
-    margin-left:350px;
 }
 
 #question_latitude {
@@ -13,5 +12,9 @@
 }
 
 #question_longitude {
+	display: none;
+}
+
+#question_radius {
 	display: none;
 }
