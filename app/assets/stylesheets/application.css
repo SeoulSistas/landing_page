@@ -19,3 +19,12 @@
 #question_longitude {
 	display: none;
 }
+
+#slider-range-max {
+    border: 1px solid #e78f08;
+    background: #f6a828
+}
+
+#slider-range-max .ui-slider-range {
+    background: white;
+}

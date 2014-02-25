@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
-# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
+gem 'geokit-rails'
+
 gem 'geocoder'
 
 gem 'gmaps4rails'
@@ -8,6 +9,10 @@ gem 'gmaps4rails'
 gem 'rails', '4.0.2'
 
 gem 'bootstrap-sass', '3.1.1.0'
+
+gem 'thin'
+
+gem 'rails_12factor'
 
 # Use sqlite3 as the database for Active Record
 #gem 'sqlite3'

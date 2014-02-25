@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140224211206) do
+ActiveRecord::Schema.define(version: 20140225154037) do
 
   create_table "emails", force: true do |t|
     t.string   "email"
@@ -27,6 +27,10 @@ ActiveRecord::Schema.define(version: 20140224211206) do
     t.float    "longitude"
     t.float    "radius"
     t.string   "location"
+    t.float    "curr_lat"
+    t.float    "curr_lng"
+    t.boolean  "is_asking_about_curr_loc"
+    t.string   "ip_address"
   end
 
 end
