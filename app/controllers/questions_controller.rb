@@ -13,7 +13,7 @@ class QuestionsController < ApplicationController
     @question = Question.new(question_params)
     
     # Get current location information using request's IP address
-    @question.ip_address = request.remote_ip
+    @question.ip_address = env['HTTP_X_REAL_IP'] ||= env['REMOTE_ADDR']
     loc = Geokit::Geocoders::IpGeocoder.geocode(@question.ip_address)
     if loc.success
       @question.curr_lat = loc.lat
