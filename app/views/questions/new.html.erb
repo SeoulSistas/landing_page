@@ -47,7 +47,7 @@
           <thead>
             <tr>
               <th>Question</th>
-              <th>From</th>
+              <th>Answerable by people within</th>
             </tr>
           </thead>
         <% for question in @newest_questions %>
@@ -56,7 +56,10 @@
             <%= question.question %>
           </td>
           <td>
-            Somewhere near <%= question.location %>
+            <%=question.radius %>
+            miles of
+            <%= question.location %>
+
           </td>
         </tr>
           </div>
