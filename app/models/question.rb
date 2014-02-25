@@ -1,7 +1,8 @@
 class Question < ActiveRecord::Base
-	validates :question, presence:true
-    
-    reverse_geocoded_by :latitude, :longitude,
-      :address => :location
-    after_validation :reverse_geocode 
+    # Geokit mappable
+    acts_as_mappable :lat_column_name => :latitude,
+                     :lng_column_name => :longitude
+        
+    validates :question, presence:true
+     
 end
