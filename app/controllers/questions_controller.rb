@@ -1,7 +1,7 @@
 class QuestionsController < ApplicationController
 
   def new
-    @newest_questions = Question.order('created_at desc').limit(10).reverse
+    @newest_questions = Question.order('created_at desc').limit(10)
     @question = Question.new
     @hash = Gmaps4rails.build_markers(@users) do |user, marker|
       marker.lat user.latitude
