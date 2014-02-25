@@ -34,7 +34,8 @@ function init() {
     });
     cityMarker = new google.maps.Marker({
         position: map.getCenter(), 
-        map: map, 
+        map: map,
+        draggable: true,
         visible: true});
     cityCircle = new google.maps.Circle({
         strokeOpacity: 0.8,
@@ -47,6 +48,7 @@ function init() {
     });
     cityCircle.bindTo('center', cityMarker, 'position');
     updateCoordsOnPage(map.getCenter());
+    google.maps.event.addListener(cityMarker, 'drag', function() { updateCoordsOnPage(cityMarker.getPosition()); } );
 }
 
 function milesToMeters(miles) {
