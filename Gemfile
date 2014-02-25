@@ -10,6 +10,10 @@ gem 'rails', '4.0.2'
 
 gem 'bootstrap-sass', '3.1.1.0'
 
+gem 'thin'
+
+gem 'rails_12factor'
+
 # Use sqlite3 as the database for Active Record
 #gem 'sqlite3'
 
