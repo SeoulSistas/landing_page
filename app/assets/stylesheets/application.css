@@ -12,10 +12,6 @@
  *= require_tree .
  */
 
-#question_radius {
-	display: none;
-}
-
 #question_latitude {
 	display: none;
 }
